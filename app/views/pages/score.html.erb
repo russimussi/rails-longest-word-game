@@ -1,0 +1,17 @@
+<h1>Longest Word Game</h1>
+<h3>Your word:</h3>
+<p><%= @attempt %></p>
+
+<h3>Translation:</h3>
+<p><%= @outcome[:translation] %></p>
+
+<h3>Time taken to answer:</h3>
+<p><%= @outcome[:time] %></p>
+
+<h3>Your score:</h3>
+<p><%= @outcome[:game_score] %></p>
+
+<h3>Message:</h3>
+<p><%= @outcome[:message] %></p>
+
+<%= link_to "Play again!", game_path %>

@@ -1,0 +1,11 @@
+<h1>Longest Word Game</h1>
+<h3>Grid</h3>
+<p><%= @grid.join(" ") %></p>
+
+<form action="/score" method="get">
+  <h3><label for="question">What's your best shot?</label></h3>
+  <input type="text" id="question" name="query" placeholder="Type here">
+  <input type="hidden" name="time" value="<%= Time.now %>">
+  <input type="hidden" name="grid" value="<%= @grid.to_json %>">
+  <input type="submit" value="Go!">
+</form>
